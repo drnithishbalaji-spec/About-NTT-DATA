@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700&family=Crimson+Text&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .card-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                              url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px;
+            color: white;
+        }
+
+        .brand-text {
+            font-family: 'Playfair Display', serif;
+            color: #c4a47c; /* Muted gold color */
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .name-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: #f3f4f6;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .btn-learn {
+            background-color: #c4a47c;
+            color: #1a1a1a;
+            padding: 8px 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: none;
+            width: fit-content;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-learn:hover {
+            background-color: #b08e61;
+            transform: translateY(-1px);
+        }
+
+        .contact-info {
+            font-family: 'Crimson Text', serif;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            line-height: 1.8;
+        }
+
+        .contact-line {
+            font-size: 1.25rem;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 640px) {
+            .brand-text { font-size: 1.75rem; }
+            .name-text { font-size: 2.25rem; }
+            .contact-line { font-size: 0.9rem; }
+            .card-container { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <!-- Top Section -->
+        <div>
+            <div class="brand-text">NTT data</div>
+            <div class="name-text">Balaji Ponmudi</div>
+            <button class="btn-learn">LEARN MORE</button>
+        </div>
+
+        <!-- Bottom Contact Section -->
+        <div class="contact-info">
+            <div class="contact-line">GMAI</div>
+            <div class="contact-line">PHONE</div>
+        </div>
+    </div>
+
+</body>
+</html>
+
